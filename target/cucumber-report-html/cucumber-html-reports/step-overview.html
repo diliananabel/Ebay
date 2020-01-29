@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>ebay</td>
+                          <td>1</td>
+                        <td>28 Jan 2020, 22:33</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">SearchProduct.afterScenario(Scenario)</td>
+                <td>3</td>
+                <td class="duration" data-value="229700">000ms</td>
+                <td class="duration" data-value="76566">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProduct.beforeScenario(Scenario)</td>
+                <td>3</td>
+                <td class="duration" data-value="3542100">003ms</td>
+                <td class="duration" data-value="1180700">001ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProduct.clickInTheCheckInPageOnEbay(String,String)</td>
+                <td>1</td>
+                <td class="duration" data-value="16845122000">16s 845ms</td>
+                <td class="duration" data-value="16845122000">16s 845ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProduct.clickInTheCheckOnEbayPage(String,String)</td>
+                <td>1</td>
+                <td class="duration" data-value="10735225800">10s 735ms</td>
+                <td class="duration" data-value="10735225800">10s 735ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProduct.clickInTheOptionBestMatch(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="1677360900">1s 677ms</td>
+                <td class="duration" data-value="1677360900">1s 677ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProduct.clickInTheOptionPriceLowestBestMatch(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="1621641300">1s 621ms</td>
+                <td class="duration" data-value="1621641300">1s 621ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProduct.clickOnTheButtonInScreenOnEbayPage(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="4606859500">4s 606ms</td>
+                <td class="duration" data-value="4606859500">4s 606ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProduct.clickOnTheButtonOnEbayPage(String)</td>
+                <td>2</td>
+                <td class="duration" data-value="20273269700">20s 273ms</td>
+                <td class="duration" data-value="10136634850">10s 136ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProduct.enterInTheProductSearchScreenOnEbayPage(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="95986300">095ms</td>
+                <td class="duration" data-value="95986300">095ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProduct.enterToEbayPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="96403900">096ms</td>
+                <td class="duration" data-value="96403900">096ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProduct.printTheNumberOfResultsOfTheProductSearchOnEbayPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="175168100">175ms</td>
+                <td class="duration" data-value="175168100">175ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProduct.printTheOrderByPriceAscendantTheResultsOfTheSearchProductOnEbayPage()</td>
+                <td>2</td>
+                <td class="duration" data-value="156424800">156ms</td>
+                <td class="duration" data-value="78212400">078ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProduct.printTheOrderTakingTheFirstResultsOrderPriceByDesc(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="574935200">574ms</td>
+                <td class="duration" data-value="574935200">574ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProduct.printTheOrderTakingTheFiveResults(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="574406500">574ms</td>
+                <td class="duration" data-value="574406500">574ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProductSecondFormat.afterScenario(Scenario)</td>
+                <td>3</td>
+                <td class="duration" data-value="14447428500">14s 447ms</td>
+                <td class="duration" data-value="4815809500">4s 815ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProductSecondFormat.beforeScenario(Scenario)</td>
+                <td>3</td>
+                <td class="duration" data-value="40164758600">40s 164ms</td>
+                <td class="duration" data-value="13388252866">13s 388ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProductSecondFormat.sfClickInTheCheckInPageOnEbay(String,String,String)</td>
+                <td>2</td>
+                <td class="duration" data-value="34449877100">34s 449ms</td>
+                <td class="duration" data-value="17224938550">17s 224ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProductSecondFormat.sfClickInTheCheckOnEbayPage(String,String,String)</td>
+                <td>2</td>
+                <td class="duration" data-value="21937324700">21s 937ms</td>
+                <td class="duration" data-value="10968662350">10s 968ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProductSecondFormat.sfClickInTheOptionPriceHighestBestMatch(String)</td>
+                <td>2</td>
+                <td class="duration" data-value="3497183900">3s 497ms</td>
+                <td class="duration" data-value="1748591950">1s 748ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProductSecondFormat.sfClickInTheOptionPriceLowestBestMatch(String)</td>
+                <td>2</td>
+                <td class="duration" data-value="3776174900">3s 776ms</td>
+                <td class="duration" data-value="1888087450">1s 888ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProductSecondFormat.sfClickOnTheButtonInScreenOnEbayPage(String)</td>
+                <td>2</td>
+                <td class="duration" data-value="10354332100">10s 354ms</td>
+                <td class="duration" data-value="5177166050">5s 177ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProductSecondFormat.sfClickOnTheButtonOnEbayPage(String)</td>
+                <td>4</td>
+                <td class="duration" data-value="40539141800">40s 539ms</td>
+                <td class="duration" data-value="10134785450">10s 134ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProductSecondFormat.sfEnterInTheProductSearchScreenOnEbayPage(String,String)</td>
+                <td>2</td>
+                <td class="duration" data-value="677016200">677ms</td>
+                <td class="duration" data-value="338508100">338ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProductSecondFormat.sfEnterToEbayPage()</td>
+                <td>2</td>
+                <td class="duration" data-value="61093300">061ms</td>
+                <td class="duration" data-value="30546650">030ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProductSecondFormat.sfPrintTheNumberOfResultsOfTheProductSearchOnEbayPage()</td>
+                <td>2</td>
+                <td class="duration" data-value="329127500">329ms</td>
+                <td class="duration" data-value="164563750">164ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProductSecondFormat.sfPrintTheOrderTakingTheFirstResultsOrderNameByASC(String,String)</td>
+                <td>2</td>
+                <td class="duration" data-value="1035514900">1s 035ms</td>
+                <td class="duration" data-value="517757450">517ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProductSecondFormat.sfPrintTheOrderTakingTheFirstResultsOrderPriceByDesc(String,String)</td>
+                <td>2</td>
+                <td class="duration" data-value="849416100">849ms</td>
+                <td class="duration" data-value="424708050">424ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SearchProductSecondFormat.sfPrintTheOrderTheResultsOfTheSearchProductOnEbayPage()</td>
+                <td>4</td>
+                <td class="duration" data-value="408414300">408ms</td>
+                <td class="duration" data-value="102103575">102ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>28</td>
+              <td>54</td>
+              <td class="duration">3m 49s 963ms</td>
+              <td class="duration">4s 258ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
